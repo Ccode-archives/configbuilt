@@ -30,7 +30,7 @@ if not istool("wget"):
 try:
     script = data["script to run"]
 except:
-    rasie OSError("No script to run given")
+    raise OSError("No script to run given")
 
 if not os.path.exists("downloads"):
     os.system("touch downloads")
