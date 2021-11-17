@@ -1,2 +1,2 @@
 # configbuilt
-A build command that uses Angledat data.
+Run setup and then built.sh to use.
