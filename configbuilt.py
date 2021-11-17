@@ -50,7 +50,7 @@ for name in data:
         try:
             response = requests.get(data[name])
             os.system("wget " + data[name])
-            os.system("mv " + data[name].split("/")[-1] + " '" + name + "/" + data[name] + "'")
+            os.system("mv " + data[name].split("/")[-1] + " '" + name + "/" + data[name].split("/")[-1] + "'")
         except requests.ConnectionError as exception:
             print("Warning: Package '" + "' does not exist!")
             os.remdir(name)
