@@ -1,4 +1,4 @@
-dir = $(pwd)
+direct=$(pwd)
 cd ~
 [ ! -d .configbuilt ] && mkdir .configbuilt
 cd .configbuilt
