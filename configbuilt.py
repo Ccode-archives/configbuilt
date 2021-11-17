@@ -16,7 +16,7 @@ home = os.path.expanduser('~')
 
 if not os.path.exists(home + "/.configbuilt"):
     raise OSError("Config directory does not exist!")
-os.system("cp ~/.configbuilt/angledat.py .")
+
 
 
 import angledat
