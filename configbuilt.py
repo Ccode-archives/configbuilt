@@ -38,7 +38,7 @@ except:
 if not os.path.exists("downloads"):
     os.system("mkdir downloads")
 os.chdir("downloads")
-for name, value in data:
+for name in data:
     if name == "script to run":
         continue
     else:
@@ -47,9 +47,9 @@ for name, value in data:
         else:
             raise OSError("Package '" + name + "' has already been downloaded")
         try:
-            response = requests.get(value)
-            os.system("wget " + value)
-            os.system("mv " + value.split("/")[-1] + " '" + name + "/" + value + "'")
+            response = requests.get(data[name])
+            os.system("wget " + data[name])
+            os.system("mv " + data[name].split("/")[-1] + " '" + name + "/" + data[name] + "'")
         except requests.ConnectionError as exception:
             print("Warning: Package '" + "' does not exist!")
             os.remdir(name)
