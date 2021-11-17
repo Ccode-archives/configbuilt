@@ -44,7 +44,7 @@ for name in data:
         continue
     else:
         if not os.path.exists(name):
-            os.system("mkdir" + name)
+            os.system("mkdir " + name)
         else:
             raise OSError("Package '" + name + "' has already been downloaded")
         try:
