@@ -55,4 +55,4 @@ for name in data:
             print("Warning: Package '" + "' does not exist!")
             os.remdir(name)
     os.chdir("..")
-    os.system(script)
+    os.system("bash " + script)
