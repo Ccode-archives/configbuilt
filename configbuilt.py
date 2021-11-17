@@ -48,6 +48,6 @@ for name, value in data:
             os.system("wget " + value)
             os.system("mv " + value.split("/")[-1] + " '" + name + "/" + value + "'")
         except requests.ConnectionError as exception:
-            print("Warning: Package '" + "' does not exist!)
+            print("Warning: Package '" + "' does not exist!")
             os.remdir(name)
     os.system(script)
