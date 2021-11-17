@@ -1,5 +1,6 @@
 import os
 import platform
+import distutils.spawn
 
 
 def is_tool(name):
