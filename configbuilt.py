@@ -1,6 +1,7 @@
 import os
 import platform
 import distutils.spawn
+import requests
 
 
 def is_tool(name):
