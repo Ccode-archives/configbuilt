@@ -13,12 +13,14 @@ if platform.system() == "Windows":
 run_folder = os.getcwd()
 home = os.path.expanduser('~')
 # get extra imports
-try:
-    os.chdir(home + "/.configbuilt")
-except:
-    raise OSError("Config directory does not exist")
+
+if not os.path.exists(home + "/.configbuilt"):
+    raise OSError("Config directory does not exist!")
+os.system("cp ~/.configbuilt/angledat.py .")
+
 
 import angledat
+os.system("rm angledat.py")
 os.chdir(run_folder)
 if os.path.exists("build.andat"):
     data = angledat.read_dict("build.andat")
