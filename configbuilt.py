@@ -36,7 +36,7 @@ except:
     raise OSError("No script to run given")
 
 if not os.path.exists("downloads"):
-    os.system("touch downloads")
+    os.system("mkdir downloads")
 os.chdir("downloads")
 for name, value in data:
     if name == "script to run":
