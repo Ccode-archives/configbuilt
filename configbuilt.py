@@ -54,4 +54,5 @@ for name in data:
         except requests.ConnectionError as exception:
             print("Warning: Package '" + "' does not exist!")
             os.remdir(name)
+    os.chdir("..")
     os.system(script)
