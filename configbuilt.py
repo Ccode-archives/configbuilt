@@ -11,9 +11,10 @@ if platform.system() == "Windows":
 
 
 run_folder = os.getcwd()
+home = os.path.expanduser('~')
 # get extra imports
 try:
-    os.chdir("~/.configbuilt")
+    os.chdir(home + "/.configbuilt")
 except:
     raise OSError("Config directory does not exist")
 
