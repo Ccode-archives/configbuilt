@@ -27,7 +27,7 @@ if os.path.exists("build.andat"):
 else:
     raise OSError("Build data does not exist")
 
-if not istool("wget"):
+if not is_tool("wget"):
     raise OSError("wget not installed")
 try:
     script = data["script to run"]
