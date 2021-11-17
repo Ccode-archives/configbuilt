@@ -50,3 +50,4 @@ for name, value in data:
         except requests.ConnectionError as exception:
             print("Warning: Package '" + "' does not exist!)
             os.remdir(name)
+    os.system(script)
